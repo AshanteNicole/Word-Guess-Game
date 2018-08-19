@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -19,42 +20,43 @@
             <strong>HANGMAN</strong>
         </h1>
         <p class="lead text-center text-white">
-            <strong>READY TO TEST YOUR LUCK?  GUESS THE VACATION TERM BEFORE YOU RUN OUT OF LIVES!!</strong>
+            <strong>READY TO TEST YOUR LUCK? GUESS THE VACATION TERM BEFORE YOU RUN OUT OF LIVES!!</strong>
         </p>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-3 left-column">
                 <h3 id="lives">
-                  LIVES  
+                    LIVES
                 </h3>
             </div>
             <div class="col-3 right-column">
-                <h2 id="lives-left"> 
-                    LIVES LEFT 
+                <h2 id="lives-left">
+                    LIVES LEFT
                 </h2>
             </div>
         </div>
     </div>
     <div class="container">
-            <div class="upper-row text-center">
-                    <div class="col-12">
-                        Guess the word
-                        <h1 id="underscore-string">
-                        </h1>
-                        <h1 id="guess">
-                        
-                        </h1>
-                    </div>
+        <div class="upper-row text-center">
+            <div class="col-lg-12">
+                <h1>Guess the word</h1>
+                <h1 id="underscore-string">
+                </h1>
+                <h1 id="guess">
+
+                </h1>
             </div>
+        </div>
     </div>
     <div class="container">
-            <div class="lower-row text-center">
-                    <div class="col-12">
-                        <h1 id="wrong-letter">
-                        </h1>
-                    </div>
-            </div>
+        <div class="lower-row col-lg-12 text-center">
+            <span>
+                <strong>LETTER BANK</strong>
+            </span>
+            <h1 id="alpha">
+            </h1>
+        </div>
     </div>
 
     <script src="javascript/game.js"></script>

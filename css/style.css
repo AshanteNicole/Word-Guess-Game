@@ -44,10 +44,10 @@ p{
  }
 
  .left-column{
-     background-color: blueviolet
+     background-color: transparent
  }
  .right-column{
-    background-color: burlywood;
+    background-color: transparent;
  }
  .upper-row{
     background-color: transparent;

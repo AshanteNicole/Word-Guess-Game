@@ -1,8 +1,8 @@
-var alphabet = "abcdefghijklmnopqrstuvwxyz"
+var alphabet = "A B C D E F G H J K L M N O P Q R S T V W X Y Z"
 var alphabetArray = alphabet.split("")
 console.log(alphabetArray)
 //creating the word bank to select the words
-var wordBank = ["Pear", "Apple", "Plum"]
+var wordBank = ["airplane", "beach", "cabin", "campground", "Italy", "cruise", "embark", "getaway", "hotel", "zoo", "travel", "vacation", " tourist", "greece", "dubai", "bora bora", "leisure"]
 //create a random number to use in the next line to select for my array
 var index = Math.floor(Math.random() * wordBank.length)
 //use random number in conjunction with wordbank array to get a random word from my bank
@@ -20,7 +20,6 @@ var wins = 0
 var guessLeft = 10
 var winMask =""
 var wrongLetter = []
-var wrongLetterTxt = document.getElementById('wrong-letter')
 var underscoreString = underscoreArray.join("")
 //selecting the spot in browser(Dom)
 
@@ -43,18 +42,28 @@ document.addEventListener("keyup", function (event) {
     document.getElementById("underscore-string").innerHTML = underscoreString;
 
     } else {
-    // if the letter is not in the mystery word, alert
-    // the user and do nothing else.
-    alert(key + " is NOT in the mystery word")
-    document.getElementById("wrong-letter")
-    }
+    alert(key + " is NOT in the mystery word")  // if the letter is not in the mystery word, alert
+   console.log(wrongLetter);  // the user and do nothing else.
+        }
 
+function gameStart() {
+    selectChosenWord()
+    setWinMask()
+    guessLeft = guessLeftDefault;
+    displayGuessLeft();
+    winCountDisplay()
+    displayGuessAttempt();    
+}
 
-function wrongLetter() {
-    wrongLetter.push(key)
-    wrongLetterTxt.textContent = wrongLetter
-    wrongCount--;
-    livesTxt.textContent = wrongCount;
-    console.log(wrongLetter)
-    }
 })  
+ function displayGuessLeft(){
+     document.getElementById("guessLeft").innerHTML = guessLeft;
+ }
+
+    function lowerGuess() {
+        guessLeft--;
+        displayGuessLeft();
+    }
+
+    document.getElementById("alpha").innerHTML = alphabet;
+    document.getElementById("lives-left").innerHTML = guessLeft;
