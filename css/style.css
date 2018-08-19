@@ -1,0 +1,81 @@
+body {
+ background-image: url(https://kuranmucizeleri.com/wp-content/uploads/2017/03/denizler-karalar.jpg);   
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-repeat:no-repeat;
+    background-size: cover;
+      position: static;
+  
+}
+
+
+#header{
+    background-color: blue;  
+    margin-right: 310px;
+    margin-left: 310px;
+ }
+
+p{
+    background-color: blue;  
+    margin-right: 310px;
+    margin-left: 310px;
+}
+
+
+ #lives {
+    background-color: transparent;
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+    height: 87px;
+    	 
+ }
+
+ #lives-left {
+    background-color: transparent;
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+    height: 87px;
+ }
+
+ #guess {
+     position: relative;
+ }
+
+ .left-column{
+     background-color: blueviolet
+ }
+ .right-column{
+    background-color: burlywood;
+ }
+ .upper-row{
+    background-color: transparent;
+ }
+ .lower-row{
+    background-color: transparent;
+    position: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 425px;
+ }
+
+
+
+@media screen (min-width: 2400px) {
+    {width: 50%;  height: 50%}
+
+@media screen (min-width: 480px) {
+    {width: 50%; float: left; height: 50%}
+}
+@media screen (min-width: 640px) {
+    {width: 50%; float: left; height: 50%}
+}
+
+@media screen (min-width: 768px) {
+    {width: 50%; float: left; height: 50%}
+}
+
+@media screen (min-width: 980px) {
+    {width: 50%; float: left; height: 50%}
+}
