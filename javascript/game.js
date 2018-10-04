@@ -1,5 +1,7 @@
+
 var alphabet = "A B C D E F G H J K L M N O P Q R S T V W X Y Z"
 var alphabetArray = alphabet.split("")
+var aplphabetString = alphabetArray.join('')
 console.log(alphabetArray)
 //creating the word bank to select the words
 var wordBank = ["airplane", "beach", "cabin", "campground", "Italy", "cruise", "embark", "getaway", "hotel", "zoo", "travel", "vacation", " tourist", "greece", "dubai", "bora bora", "leisure"]
@@ -43,27 +45,36 @@ document.addEventListener("keyup", function (event) {
 
     } else {
     alert(key + " is NOT in the mystery word")  // if the letter is not in the mystery word, alert
+    lowerGuess()
+  
    console.log(wrongLetter);  // the user and do nothing else.
         }
+        var index=alphabetArray.indexOf(key.toUpperCase())
+        console.log(index)
+         alphabetArray.splice(index, 1)
+         console.log(alphabetArray)
+         aplphabetString = alphabetArray.join('')
+         document.getElementById("alpha").innerHTML = aplphabetString;
 
-function gameStart() {
-    selectChosenWord()
-    setWinMask()
-    guessLeft = guessLeftDefault;
-    displayGuessLeft();
-    winCountDisplay()
-    displayGuessAttempt();    
-}
+//function gameStart() {
+   // selectChosenWord()
+    //setWinMask()
+    //guessLeft = guessLeftDefault;
+    //displayGuessLeft();
+    //winCountDisplay()
+    //displayGuessAttempt();    
+//}
 
 })  
  function displayGuessLeft(){
-     document.getElementById("guessLeft").innerHTML = guessLeft;
+    document.getElementById("lives-left").innerHTML = guessLeft;
  }
+ displayGuessLeft();
 
     function lowerGuess() {
         guessLeft--;
         displayGuessLeft();
     }
 
-    document.getElementById("alpha").innerHTML = alphabet;
-    document.getElementById("lives-left").innerHTML = guessLeft;
+    document.getElementById("alpha").innerHTML = aplphabetString;
+    
