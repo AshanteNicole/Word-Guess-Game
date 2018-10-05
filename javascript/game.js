@@ -58,23 +58,23 @@ document.addEventListener("keyup", function (event) {
 
 //function gameStart() {
    // selectChosenWord()
-    //setWinMask()
-    //guessLeft = guessLeftDefault;
-    //displayGuessLeft();
-    //winCountDisplay()
-    //displayGuessAttempt();    
+   // setWinMask()
+   // guessLeft = guessLeftDefault;
+   // displayGuessLeft();
+//winCountDisplay()
+   // displayGuessAttempt();    
 //}
 
 })  
  function displayGuessLeft(){
     document.getElementById("lives-left").innerHTML = guessLeft;
  }
- displayGuessLeft();
+ //displayGuessLeft();
 
     function lowerGuess() {
         guessLeft--;
         displayGuessLeft();
-    }
-
+        }
+    
     document.getElementById("alpha").innerHTML = aplphabetString;
     
